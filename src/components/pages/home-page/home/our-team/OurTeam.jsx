@@ -1,7 +1,7 @@
 
 const OurTeam = () => {
     return (
-        <div className="mt-20 bg-[url('https://i.ibb.co/qD3Dtqb/young-girl-hand-holding-colorful-balloons-1150-4023.jpg')] bg-cover bg-center bg-no-repeat bg-[rgba(0,0,0,0.7)] bg-blend-overlay text-white p-5">
+        <div className="mt-20 bg-[url('https://i.ibb.co/fXG0Mx0/artistic-wall-background-53876-88638.jpg')] bg-cover bg-center bg-no-repeat bg-[rgba(0,0,0,0.7)] bg-blend-overlay text-white p-5">
             <h3 className="text-3xl font-bold text-center">
                 Meet with our team
             </h3>
