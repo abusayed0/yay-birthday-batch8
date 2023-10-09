@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <header>
             <div className="navbar nav-bg min-h-0 p-0 py-4">
-                <div className="navbar-start gap-2 lg:gap-0">
+                <div className="navbar-start gap-2 lg:gap-0 w-3/5 md:w-1/2" >
                     <div className="dropdown">
                         <label tabIndex={0} className="lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -23,7 +23,7 @@ const Navbar = () => {
                         <li><NavLink to="/packages" className="inline-block px-4 py-2 bg-btnPrimaryBg text-white font-medium">Packages</NavLink></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end w-2/5 md:w-1/2">
                     <button onClick={() => navigate("/login")} className="font-semibold px-4 py-2 text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ">Login</button>
                 </div>
             </div>

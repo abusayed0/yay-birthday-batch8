@@ -1,8 +1,9 @@
+import HomeBanner from "../home-banner/HomeBanner";
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home page!</h2>
+            <HomeBanner/>
         </div>
     );
 };
