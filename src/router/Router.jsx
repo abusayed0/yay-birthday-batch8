@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../components/layouts/Root/Root";
 import Home from "../components/pages/home-page/home/Home";
 import Login from "../components/pages/login-page/login/Login";
-import Packages from "../components/pages/packages-page/Packages";
+import Packages from "../components/pages/packages-page/packages/Packages";
 
 const router = createBrowserRouter([{
     path: "/",
@@ -15,6 +15,7 @@ const router = createBrowserRouter([{
         },
         {
             path: "/packages",
+            loader : () => fetch("/data.json"),
             element: <Packages/>
         },
         {

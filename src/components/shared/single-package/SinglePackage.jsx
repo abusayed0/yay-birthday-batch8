@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 
-const TopPackage = ({ topPackageData }) => {
-    console.log(topPackageData);
-    const { id, thumbnail, name, description, price } = topPackageData;
+const SinglePackage = ({ singlePackageData }) => {
+    const { id, thumbnail, name, description, price } = singlePackageData;
     return (
         <div className='border flex flex-col'>
             <div>
@@ -21,7 +20,7 @@ const TopPackage = ({ topPackageData }) => {
         </div>
     );
 };
-TopPackage.propTypes = {
-    topPackageData: PropTypes.object.isRequired
+SinglePackage.propTypes = {
+    singlePackageData: PropTypes.object.isRequired
 };
-export default TopPackage;
+export default SinglePackage;

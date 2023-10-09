@@ -1,7 +1,7 @@
 
 const Contact = () => {
     return (
-        <div className="mt-20 bg-[#f5f8e8] flex gap-8 flex-col md:flex-row items-center p-5 ">
+        <div id="contact" className="mt-20 bg-[#f5f8e8] flex gap-8 flex-col md:flex-row items-center p-5 ">
             <div className="md:w-1/2">
                 <div className="max-w-[400px] mx-auto">
                     <h2 className="text-4xl font-medium">Making Your Birthday Truly Unforgettable</h2>
