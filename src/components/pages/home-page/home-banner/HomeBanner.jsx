@@ -7,7 +7,7 @@ const HomeBanner = () => {
                 <p className="text-white text-xl">Welcome to Yay Birthday – Your go-to destination for crafting unforgettable birthday celebrations. From cakes to decorations, we make every moment special.</p>
                <div className="relative">
                     <input className="w-full p-2 md:p-3" type="email" name="email" id="email" placeholder="Your Email"/>
-                    <button className="absolute right-0 px-2 md:px-3 bg-btnPrimaryBg h-full text-xl text-white font-medium hover:bg-[#12486B]">Book Now</button>
+                    <button className="absolute right-0 px-2 md:px-3 bg-btnPrimaryBg h-full text-xl text-white font-medium hover:bg-[#12486B]">Email Us</button>
                </div>
             </div>
         </div>

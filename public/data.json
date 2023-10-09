@@ -1,0 +1,135 @@
+
+    [
+      {
+        "id": 1,
+        "thumbnail": "https://i.ibb.co/pwVs3jX/couples-celebrating-birthday-23-2149891227.jpg",
+        "name": "Basic Birthday Bash",
+        "description": "A simple yet delightful celebration featuring colorful balloon decorations, cake options, and party favors. Let our coordinator handle the details for a hassle-free experience.",
+        "price": "$199.99",
+        "advantages": [
+          "Colorful balloon decorations to brighten the party atmosphere",
+          "Delicious cake with a variety of flavors to choose from",
+          "Party favors including hats, noisemakers, and goody bags for all guests",
+          "Skilled party coordinator to ensure a hassle-free celebration"
+        ]
+      },
+      {
+        "id": 2,
+        "thumbnail": "https://i.ibb.co/5vCmbyM/birthday-party-concept-with-joyful-people-23-2147716819.jpg",
+        "name": "Princess Party Extravaganza",
+        "description": "Transform your child into royalty with princess-themed decorations, character appearances, and enchanting activities like wand crafting.",
+        "price": "$299.99",
+        "advantages": [
+          "Themed decorations with princesses, fairy tales, and castles",
+          "Professional princess character appearance for photos and storytelling",
+          "Magical entertainment and games like wand crafting and tiara making",
+          "Personalized princess-themed invitations for your guests"
+        ]
+      },
+      {
+        "id": 3,
+        "thumbnail": "https://i.ibb.co/Bqtdnny/group-friends-with-cake-surprise-birthday-party-23-2149749139.jpg",
+        "name": "Superhero Adventure",
+        "description": "An action-packed adventure with hero-themed decorations, interactive activities, and custom superhero masks for every child.",
+        "price": "$249.99",
+        "advantages": [
+          "Hero-themed decorations and props for an immersive experience",
+          "Exciting superhero character appearance for interactive fun",
+          "Adventure games and activities like obstacle courses and treasure hunts",
+          "Custom superhero masks for all partygoers"
+        ]
+      },
+      {
+        "id": 4,
+        "thumbnail": "https://i.ibb.co/LtWPWG6/friends-holding-fire-crackers-hand-sitting-with-birthday-girl-holding-cake-hand-23-2148029790.jpg",
+        "name": "Teenage Dream Party",
+        "description": "Party in style with hip decorations, a DJ, and a photo booth for memorable snapshots, creating a night of dancing and fun.",
+        "price": "$349.99",
+        "advantages": [
+          "Hip decorations and atmospheric lighting to set the mood",
+          "Professional DJ playing the latest music hits",
+          "Photo booth with props for creating memorable snapshots",
+          "Customized playlist option for the birthday teen"
+        ]
+      },
+      {
+        "id": 5,
+        "thumbnail": "https://i.ibb.co/4R5gCH9/party-portraits-young-adults-having-fun-23-2149431527.jpg",
+        "name": "Elegant Garden Soiree",
+        "description": "Experience an outdoor celebration with beautiful garden decor, gourmet catering, and live acoustic music for lasting memories.",
+        "price": "$399.99",
+        "advantages": [
+          "Beautiful garden setup with fairy lights and floral arrangements",
+          "Gourmet catering with a selection of fine wines and appetizers",
+          "Live acoustic music to create a soothing ambiance",
+          "Customizable seating and dining arrangements"
+        ]
+      },
+      {
+        "id": 6,
+        "thumbnail": "https://i.ibb.co/x8Z7D0J/guests-blowing-candles-cake-23-2147783712.jpg",
+        "name": "Surprise Party Spectacular",
+        "description": "Plan a memorable surprise with covert execution, customized reveals, and entertainment options that leave the guest of honor in awe.",
+        "price": "$299.99",
+        "advantages": [
+          "Covert planning and execution to keep the surprise element intact",
+          "Customized surprise reveal that will leave the guest of honor in awe",
+          "Entertainment options like a magician or surprise guest appearance",
+          "Refreshments tailored to the guest of honor's preferences"
+        ]
+      },
+      {
+        "id": 7,
+        "thumbnail": "https://i.ibb.co/NnHmyWJ/young-joyful-friends-celebrating-23-2147652023.jpg",
+        "name": "Animal Lover's Paradise",
+        "description": "A paradise for young animal lovers, featuring themed decorations, a petting zoo, and educational sessions.",
+        "price": "$249.99",
+        "advantages": [
+          "Animal-themed decorations featuring cute and exotic animals",
+          "Petting zoo with friendly animals for hands-on experiences",
+          "Animal-themed goodie bags filled with animal toys and treats",
+          "Educational sessions led by an animal expert"
+        ]
+      },
+      {
+        "id": 8,
+        "thumbnail": "https://i.ibb.co/KLtyh8T/medium-shot-smiley-friends-celebrating-23-2149537490.jpg",
+        "name": "Carnival Fun Fair",
+        "description": "Enjoy games, cotton candy, popcorn, and thrilling rides with prizes for all guests in this fairytale celebration.",
+        "price": "$349.99",
+        "advantages": [
+          "Carnival games and booths with exciting prizes to be won",
+          "Cotton candy and popcorn stations for classic carnival treats",
+          "Prizes for all guests to take home as souvenirs",
+          "Fun carnival rides to add excitement to the celebration"
+        ]
+      },
+      {
+        "id": 9,
+        "thumbnail": "https://i.ibb.co/ZxHJK7P/cheerful-girls-near-nice-cake-23-2147783812.jpg",
+        "name": "Artistic Creativity Party",
+        "description": "Unleash creativity with art supplies, guided activities, and take home your artistic masterpiece.",
+        "price": "$279.99",
+        "advantages": [
+          "Art supplies and creative activities like painting and sculpting",
+          "Art instructor for guidance and assistance with art projects",
+          "Artistic masterpieces created by the children to take home as keepsakes",
+          "Gallery-style display of the young artists' work"
+        ]
+      },
+      {
+        "id": 10,
+        "thumbnail": "https://i.ibb.co/NF5zjX0/laughing-celebrating-new-years-eve-329181-5108.jpg",
+        "name": "Science Explorer's Adventure",
+        "description": "Embark on a hands-on science adventure with experiments, interactive learning, and take-home science-themed goody bags.",
+        "price": "$299.99",
+        "advantages": [
+          "Engaging science experiments and demonstrations for curious minds",
+          "Interactive learning experiences that make science fun",
+          "Scientist-hosted birthday party with educational content",
+          "Science-themed goody bags filled with exciting experiments"
+        ]
+      }
+    ]
+  
+  
