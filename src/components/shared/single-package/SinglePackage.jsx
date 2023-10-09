@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { AuthContext } from '../../context-provider/AuthProvider';
 
 const SinglePackage = ({ singlePackageData }) => {
+    console.log(useContext(AuthContext));
     const { id, thumbnail, name, description, price } = singlePackageData;
     return (
         <div className='border flex flex-col'>
