@@ -3,6 +3,7 @@ import Root from "../components/layouts/Root/Root";
 import Home from "../components/pages/home-page/home/Home";
 import Login from "../components/pages/login-page/login/Login";
 import Packages from "../components/pages/packages-page/packages/Packages";
+import PackageDetails from "../components/pages/package-details-page/PackageDetails";
 
 const router = createBrowserRouter([{
     path: "/",
@@ -17,6 +18,11 @@ const router = createBrowserRouter([{
             path: "/packages",
             loader : () => fetch("/data.json"),
             element: <Packages/>
+        },
+        {
+            path: "/:id/details",
+            loader : () => fetch("/data.json"),
+            element: <PackageDetails/>
         },
         {
             path: "/login",

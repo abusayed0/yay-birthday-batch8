@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { AuthContext } from '../../context-provider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const SinglePackage = ({ singlePackageData }) => {
     console.log(useContext(AuthContext));
     const { id, thumbnail, name, description, price } = singlePackageData;
+    const navigate = useNavigate();
     return (
         <div className='border flex flex-col'>
             <div>
@@ -17,7 +19,7 @@ const SinglePackage = ({ singlePackageData }) => {
                 </div>
                 <div className="mt-2 flex items-center justify-between">
                     <h4 className="text-3xl">{price}</h4>
-                    <button className="px-3 md:px-4 bg-btnPrimaryBg py-2 text-xl text-white font-medium hover:bg-[#12486B]">Now Details</button>
+                    <button onClick={() => navigate(`/${id}/details`)} className="px-3 md:px-4 bg-btnPrimaryBg py-2 text-xl text-white font-medium hover:bg-[#12486B]">Know Details</button>
                 </div>
             </div>
         </div>
