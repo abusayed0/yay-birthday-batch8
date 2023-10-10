@@ -8,9 +8,11 @@ import Register from "../components/pages/resgister-page/register/Register";
 import Gallery from "../components/pages/galllery-page/gallery/Gallery";
 import Blogs from "../components/pages/blogs-page/blogs/Blogs";
 import Protected from "../components/pages/protected-page/Protected";
+import ErrroPage from "../components/pages/error-page/ErrroPage";
 
 const router = createBrowserRouter([{
     path: "/",
+    errorElement : <ErrroPage/>,
     element: <Root/>,
     children: [
         {
