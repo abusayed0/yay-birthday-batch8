@@ -6,8 +6,8 @@ import toast from "react-hot-toast";
 const Login = () => {
 
   const {emailPassLogin, googleLogIn} = useContext(AuthContext);
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const from = location.state?.from || "/";
   // console.log(from);
@@ -47,6 +47,7 @@ const Login = () => {
     .catch(error => {
       const errorMessage = error.message;
       console.log(errorMessage);
+      toast.error(errorMessage);
     })
 
   };
