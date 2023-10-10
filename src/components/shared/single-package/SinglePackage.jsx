@@ -19,7 +19,7 @@ const SinglePackage = ({ singlePackageData }) => {
                 </div>
                 <div className="mt-2 flex items-center justify-between">
                     <h4 className="text-3xl">{price}</h4>
-                    <button onClick={() => navigate(`/${id}/details`)} className="px-3 md:px-4 bg-btnPrimaryBg py-2 text-xl text-white font-medium hover:bg-[#12486B]">Know Details</button>
+                    <button onClick={() => navigate(`/${id}/details`)} className="px-3  bg-btnPrimaryBg py-2 text-xl text-white font-medium hover:bg-[#12486B]">Know Details</button>
                 </div>
             </div>
         </div>

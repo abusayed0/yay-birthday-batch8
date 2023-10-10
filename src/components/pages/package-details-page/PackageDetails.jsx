@@ -6,7 +6,7 @@ const PackageDetails = () => {
     const allPackages = useLoaderData();
 
     const currentPackage = allPackages.find(onePackage => onePackage.id === +currentPackageId);
-    const { id, thumbnail, name, description, price, advantages } = currentPackage;
+    const {thumbnail, name, description, price, advantages } = currentPackage;
 
     return (
         <div className="mt-20 flex gap-10  flex-col md:flex-row">
@@ -31,7 +31,7 @@ const PackageDetails = () => {
                     }
                 </ul>
                 <div className="mt-6">
-                    <button className="px-4 py-3 text-white font-semibold bg-orange-600 hover:bg-orange-800">Book Now</button>
+                    <button className="px-4 py-3 text-white font-semibold bg-orange-600 hover:bg-orange-800 text-xl">Book Now</button>
                 </div>
             </div>
         </div>

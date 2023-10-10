@@ -4,7 +4,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     return (
         <header>
-            <div className="navbar nav-bg min-h-0 p-0 py-4">
+            <div className="navbar nav-bg min-h-0 px-1 md:px-6 lg:px-10 py-4">
                 <div className="navbar-start gap-2 lg:gap-0 w-3/5 md:w-1/2" >
                     <div className="dropdown">
                         <label tabIndex={0} className="lg:hidden">

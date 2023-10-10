@@ -6,7 +6,7 @@ const TopPackages = ({data}) => {
     return (
         <div className="mt-20">
            <h3 className="text-3xl font-bold text-center">Top packages of the month</h3> 
-           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     data.slice(0, 6).map(packageData => <SinglePackage
                      key={packageData.id}
