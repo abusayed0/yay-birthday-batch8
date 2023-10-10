@@ -3,7 +3,7 @@ import { AuthContext } from "../../context-provider/AuthProvider";
 import PropTypes from 'prop-types';
 import { Navigate, useLocation } from "react-router-dom";
 
-const Protected = ({chlidren}) => {
+const Protected = ({children}) => {
     const location = useLocation();
     const state = {
         from : location.pathname
@@ -15,9 +15,9 @@ const Protected = ({chlidren}) => {
     else if(!loggedUser){
         return <Navigate to="/login" state={state} replace={true}/>
     }
-    return chlidren;
+    return children;
 };
 Protected.propTypes = {
-    chlidren : PropTypes.element.isRequired
+    children : PropTypes.element.isRequired
 };
 export default Protected;

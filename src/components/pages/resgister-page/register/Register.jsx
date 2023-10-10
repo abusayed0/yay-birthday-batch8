@@ -1,10 +1,24 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context-provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const { createUser, update} = useContext(AuthContext);
+    const navigate = useNavigate()
+    const handleUpdateProfile = (data) => {
+        update(data)
+            .then(() => {
+                console.log("profileUpdate");
+                toast.success("Profile Updated.")
+                navigate("/");
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+                toast.error(errorMessage);
+            })
+    }
     const handleRegister = (e) => {
         e.preventDefault();
 
@@ -16,23 +30,28 @@ const Register = () => {
         const password = form.get("password");
         // console.log(name, photoUrl, email, password);
         const condition = /^(?=.*[A-Z])(?=.*[!@#$&*]).{6,}$/;
-        if(!condition.test(password)){
-            toast.error("Password must be contain atleast 6 character, one uppercase and one special character.")
+        if (!condition.test(password)) {
+            toast.error("Password must be atleast 6 character and contain uppercase and special character.")
             return;
         }
         // create user 
         createUser(email, password)
-        .then(success => {
-            const currentUser = success.user;
-            console.log(currentUser);
-            toast.success('Resgistration Successful!')
-        })
-        .catch(error => {
-            const errorMesssage = error.message;
-            console.log(errorMesssage);
-            toast.error(errorMesssage);
-           
-        })
+            .then(success => {
+                const currentUser = success.user;
+                console.log("create user",currentUser);
+                toast.success('Registration Successful!')
+                const data = {
+                    displayName: name,
+                    photoURL: photoUrl
+                }
+                handleUpdateProfile(data);
+            })
+            .catch(error => {
+                const errorMesssage = error.message;
+                console.log(errorMesssage);
+                toast.error(errorMesssage);
+
+            })
     };
     return (
         <div className="mt-20 bg-[#f5f8e8] p-5 md:p-8 w-full md:w-4/5 lg:w-3/5 mx-auto">
@@ -56,7 +75,6 @@ const Register = () => {
                 </div>
                 <button className="px-6 py-2 text-white font-bold bg-btnPrimaryBg hover:bg-[#12486B]">Register</button>
             </form>
-
             <p className="text-xl mt-8 text-center">Already have an account? please <Link to="/login" className="underline decoration-orange-600 hover:no-underline">login</Link>.</p>
         </div>
     );
