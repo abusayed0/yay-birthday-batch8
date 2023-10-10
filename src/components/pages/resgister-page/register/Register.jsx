@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
     const handleRegister = (e) => {
-            e.preventDefault();
-            console.log("btn clicked");
+        e.preventDefault();
+        console.log("btn clicked");
+        // get form data 
+        const form = new FormData(e.currentTarget);
+        const name = form.get("name");
+        const photoUrl = form.get("photo");
+        const email = form.get("email");
+        const password = form.get("password");
+        console.log(name, photoUrl, email, password);
     };
     return (
         <div className="mt-20 bg-[#f5f8e8] p-5 md:p-8 w-full md:w-4/5 lg:w-3/5 mx-auto">
@@ -27,7 +34,7 @@ const Register = () => {
                 </div>
                 <button className="px-6 py-2 text-white font-bold bg-btnPrimaryBg hover:bg-[#12486B]">Register</button>
             </form>
-           
+
             <p className="text-xl mt-8 text-center">Already have an account? please <Link to="/login" className="underline decoration-orange-600 hover:no-underline">login</Link>.</p>
         </div>
     );
