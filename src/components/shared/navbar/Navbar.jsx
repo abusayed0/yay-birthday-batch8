@@ -13,6 +13,8 @@ const Navbar = () => {
                         <ul tabIndex={0} className="flex flex-col gap-2 dropdown-content mt-4 z-[1] p-3 shadow nav-bg rounded-box w-52">
                             <li><NavLink to="/" className="block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Home</NavLink></li>
                             <li><NavLink to="/packages" className="block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Packages</NavLink></li>
+                            <li><NavLink to="/blogs" className="block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Blogs</NavLink></li>
+                            <li><NavLink to="/gallery" className="block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Gallery</NavLink></li>
                         </ul>
                     </div>
                     <a className="text-3xl font-bold">Yay Birthday!</a>
@@ -21,6 +23,8 @@ const Navbar = () => {
                     <ul className="flex gap-4">
                         <li><NavLink to="/" className="inline-block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Home</NavLink></li>
                         <li><NavLink to="/packages" className="inline-block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Packages</NavLink></li>
+                        <li><NavLink to="/blogs" className="inline-block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Blogs</NavLink></li>
+                        <li><NavLink to="/gallery" className="inline-block px-4 py-2 bg-btnPrimaryBg text-white font-medium hover:bg-[#12486B]">Gallery</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end w-2/5 md:w-1/2">

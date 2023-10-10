@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
-import { AuthContext } from '../../context-provider/AuthProvider';
+
 import { useNavigate } from 'react-router-dom';
 
 const SinglePackage = ({ singlePackageData }) => {
-    console.log(useContext(AuthContext));
     const { id, thumbnail, name, description, price } = singlePackageData;
     const navigate = useNavigate();
     return (

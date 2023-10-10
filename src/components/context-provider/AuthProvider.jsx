@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 export const AuthContext = createContext(null);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
     const [loggedUser, setLoggedUser] = useState(null);
-    const contextValue = {loggedUser};
+    const [isLoading, setIsLoading] = useState(false);
+    const contextValue = {
+        loggedUser,
+        isLoading
+    };
     return (
         <AuthContext.Provider value={contextValue}>
             {
@@ -15,6 +19,6 @@ const AuthProvider = ({children}) => {
     );
 };
 AuthProvider.propTypes = {
-    children : PropTypes.element.isRequired
+    children: PropTypes.element.isRequired
 };
 export default AuthProvider;

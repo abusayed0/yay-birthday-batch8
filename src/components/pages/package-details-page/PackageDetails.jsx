@@ -31,7 +31,7 @@ const PackageDetails = () => {
                     }
                 </ul>
                 <div className="mt-6">
-                    <button className="px-4 py-3 text-white font-semibold bg-orange-600 hover:bg-orange-800 text-xl">Book Now</button>
+                    <button className="px-3 py-2 md:px-4 md:py-3  text-white font-semibold bg-orange-600 hover:bg-orange-800 text-xl">Book Now</button>
                 </div>
             </div>
         </div>

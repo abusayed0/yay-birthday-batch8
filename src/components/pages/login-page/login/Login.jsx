@@ -1,10 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {AiFillGoogleCircle} from "react-icons/ai"
 const Login = () => {
+  const location = useLocation();
+  const from = location.state?.from || "/";
+  console.log(from);
+  const handleEmailPassLogin = (e) => {
+    e.preventDefault();
+    console.log("btn clicked");
+
+  };
   return (
     <div className="mt-20 bg-[#f5f8e8]  p-5 md:p-8 w-full md:w-4/5 lg:w-3/5 mx-auto">
       <h2 className="text-2xl md:text-3xl font-semibold">Please Login</h2>
-      <form className="mt-5 flex flex-col gap-3  items-start">
+      <form onSubmit={handleEmailPassLogin} className="mt-5 flex flex-col gap-3  items-start">
         <div className="w-full">
           <label htmlFor="email" className="text-xl">Enter your email <span className="text-red-600">*</span></label>
           <input type="email" name="email" id="email" className="mt-1 w-full p-3" placeholder="Email" required />
