@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context-provider/AuthProvider";
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
     const handleRegister = (e) => {
         e.preventDefault();
         console.log("btn clicked");
@@ -10,7 +13,18 @@ const Register = () => {
         const photoUrl = form.get("photo");
         const email = form.get("email");
         const password = form.get("password");
-        console.log(name, photoUrl, email, password);
+        // console.log(name, photoUrl, email, password);
+
+        // create user 
+        createUser(email, password)
+        .then(success => {
+            const currentUser = success.user;
+            console.log(currentUser);
+        })
+        .catch(error => {
+            const errorMesssage = error.message;
+            console.log(errorMesssage);
+        })
     };
     return (
         <div className="mt-20 bg-[#f5f8e8] p-5 md:p-8 w-full md:w-4/5 lg:w-3/5 mx-auto">

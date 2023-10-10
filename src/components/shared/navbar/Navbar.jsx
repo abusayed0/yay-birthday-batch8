@@ -1,6 +1,20 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css"
+import { useContext } from "react";
+import { AuthContext } from "../../context-provider/AuthProvider";
 const Navbar = () => {
+    const { loggedUser, logOut } = useContext(AuthContext);
+    console.log(loggedUser);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log("log out successfull");
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            })
+    }
     const navigate = useNavigate();
     return (
         <header>
@@ -28,7 +42,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end w-2/5 md:w-1/2">
-                    <button onClick={() => navigate("/login")} className="font-semibold px-4 py-2 text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ">Login</button>
+                    {
+                        loggedUser ?
+                            <button onClick={handleLogOut} className="font-semibold px-4 py-2 text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ">Log Out</button>
+                            :
+                            <button onClick={() => navigate("/login")} className="font-semibold px-4 py-2 text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ">Log In</button>
+
+                    }
                 </div>
             </div>
         </header>

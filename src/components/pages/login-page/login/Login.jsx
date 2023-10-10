@@ -1,18 +1,37 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {AiFillGoogleCircle} from "react-icons/ai"
+import { useContext } from "react";
+import { AuthContext } from "../../../context-provider/AuthProvider";
 const Login = () => {
+
+  const {emailPassLogin} = useContext(AuthContext);
   const location = useLocation();
+  const navigate = useNavigate();
+
   const from = location.state?.from || "/";
-  console.log(from);
+  // console.log(from);
+
   const handleEmailPassLogin = (e) => {
     e.preventDefault();
-    console.log("btn clicked");
 
     // get form data 
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
+    // console.log(email, password);
+
+    // login with email password 
+    emailPassLogin(email, password)
+    .then(success => {
+      const currentUser = success.user;
+      console.log(currentUser);
+      navigate(from, {replace: true});
+      
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    })
 
   };
   return (
