@@ -4,7 +4,9 @@ import TopPackages from "../top-packages/TopPackages";
 import OurTeam from "./our-team/OurTeam";
 import Contact from "./contact/Contact";
 
+
 const Home = () => {
+    
     const data = useLoaderData();
     return (
         <div>

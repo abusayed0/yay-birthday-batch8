@@ -2,8 +2,16 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../../shared/navbar/Navbar";
 import Footer from "../../shared/footer/Footer";
 import { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Root = () => {
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
     return (
         <div className="font-primaryFont max-w-[1440px] mx-auto">
             <Navbar />

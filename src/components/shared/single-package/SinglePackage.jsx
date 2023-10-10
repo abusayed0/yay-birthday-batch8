@@ -6,7 +6,7 @@ const SinglePackage = ({ singlePackageData }) => {
     const { id, thumbnail, name, description, price } = singlePackageData;
     const navigate = useNavigate();
     return (
-        <div className='border flex flex-col'>
+        <div data-aos="zoom-in-up"  className='border flex flex-col'>
             <div>
                 <img className="w-full h-[200px]" src={thumbnail} alt="" />
             </div>
