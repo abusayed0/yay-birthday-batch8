@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css"
 import { useContext } from "react";
 import { AuthContext } from "../../context-provider/AuthProvider";
+import toast from "react-hot-toast";
 const Navbar = () => {
     const { loggedUser, logOut } = useContext(AuthContext);
     console.log(loggedUser);
@@ -9,6 +10,7 @@ const Navbar = () => {
         logOut()
             .then(() => {
                 console.log("log out successfull");
+                toast.success('Log out successfull')
             })
             .catch(error => {
                 const errorMessage = error.message;

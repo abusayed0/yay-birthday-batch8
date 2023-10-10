@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context-provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     const handleRegister = (e) => {
         e.preventDefault();
-        console.log("btn clicked");
+        
         // get form data 
         const form = new FormData(e.currentTarget);
         const name = form.get("name");
@@ -20,6 +21,7 @@ const Register = () => {
         .then(success => {
             const currentUser = success.user;
             console.log(currentUser);
+            toast.success('Resgistration Successful!')
         })
         .catch(error => {
             const errorMesssage = error.message;

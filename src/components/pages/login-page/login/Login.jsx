@@ -2,14 +2,29 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import {AiFillGoogleCircle} from "react-icons/ai"
 import { useContext } from "react";
 import { AuthContext } from "../../../context-provider/AuthProvider";
+import toast from "react-hot-toast";
 const Login = () => {
 
-  const {emailPassLogin} = useContext(AuthContext);
+  const {emailPassLogin, googleLogIn} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
   const from = location.state?.from || "/";
   // console.log(from);
+
+  const handleGoogleLogin = () => {
+    googleLogIn()
+    .then(success => {
+      const currentUser = success.user;
+      console.log(currentUser);
+      toast.success("Login Successful!");
+      navigate(from, {replace: true});
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+      toast.error(errorMessage);
+    })
+  };
 
   const handleEmailPassLogin = (e) => {
     e.preventDefault();
@@ -25,6 +40,7 @@ const Login = () => {
     .then(success => {
       const currentUser = success.user;
       console.log(currentUser);
+      toast.success('Login Successfull!')
       navigate(from, {replace: true});
       
     })
@@ -55,7 +71,7 @@ const Login = () => {
           <hr className="h-[2px] bg-black flex-1" />
         </div>
         <div className="mt-3 flex justify-center">
-          <button className="px-4 py-2 text-white font-semibold bg-[#ea4335] flex items-center gap-1">
+          <button onClick={handleGoogleLogin} className="px-4 py-2 text-white font-semibold bg-[#ea4335] flex items-center gap-1">
             <AiFillGoogleCircle className="text-2xl"/>
             <span className="text-xl"> Google</span>
             </button>
