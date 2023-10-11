@@ -14,7 +14,7 @@ const PackageDetails = () => {
                 <img className="absolute h-full w-full" src={thumbnail} alt="" />
             </div>
             <div className="w-full md:w-1/2">
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 text-center md:text-left">
                     <h3 className="text-3xl md:text-4xl font-semibold">{name}</h3>
                     <p className="text-xl">{description}</p>
                     <h4 className="text-2xl md:text-3xl font-bold">{price}</h4>
@@ -30,7 +30,7 @@ const PackageDetails = () => {
                         </li>)
                     }
                 </ul>
-                <div className="mt-6">
+                <div className="mt-6 text-center md:text-left">
                     <button className="px-3 py-2 md:px-4 md:py-3  text-white font-semibold bg-orange-600 hover:bg-orange-800 text-xl">Book Now</button>
                 </div>
             </div>

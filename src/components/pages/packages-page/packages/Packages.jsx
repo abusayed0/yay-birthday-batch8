@@ -1,7 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import SinglePackage from "../../../shared/single-package/SinglePackage";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Packages = () => {
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
     const data = useLoaderData();
     // console.log(data);
     return (
